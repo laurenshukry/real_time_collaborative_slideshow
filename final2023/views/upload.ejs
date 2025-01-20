@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Picture</title>
+    <link rel="stylesheet" href="/styles.css"> 
+    <link rel="stylesheet" href="/upload.css"> 
+</head>
+<body class="upload-page"> 
+    <div class="container">
+        <h1>Upload a New Picture</h1>
+        <form action="/pictures" method="POST" enctype="multipart/form-data">
+            <label for="image">Select image to upload:</label>
+            <input type="file" id="image" name="image" required>
+            <button type="submit">Upload Picture</button>
+        </form>
+
+        <% if (uploadedImage) { %>
+            <div class="uploaded-image">
+                <h2>Uploaded Image:</h2>
+                <img src="/uploads/<%= uploadedImage %>" alt="Uploaded Image">
+            </div>
+        <% } %>
+
+       
+        <button id="home-btn" onclick="window.location.href = '/'">Home</button>
+        
+        <a href="/">Back to Home</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Collaborative Slideshow Project</p>
+    </footer>
+</body>
+</html>

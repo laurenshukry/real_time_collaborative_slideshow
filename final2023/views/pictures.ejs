@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture List</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/pictures.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Picture List</h1>
+        <ul id="picture-list">
+            <% pictures.forEach(picture => { %>
+                <li>
+                    <a href="/pictures/<%= picture.id %>">
+                        <img src="<%= picture.path %>" alt="Picture" class="thumbnail">
+                    </a>
+                    <form action="/pictures/<%= picture.id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Slideshow</title>
+    
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/slideshow.js" defer></script>
+</head>
+<body>
+    <div id="slideshow-container">
+        
+        <button id="home-btn" onclick="window.location.href = '/'">Home</button>
+         <img id="slideshow-image" src="" alt="Slideshow Image">
+    </div>
+    <button id="start-btn">Start</button>
+    <button id="stop-btn">Stop</button>
+    <button id="next-btn">Next</button>
+    <button id="prev-btn">Previous</button>
+    <input type="number" id="speed-input" placeholder="Speed (ms)" value="2000">
+</body>
+</html>

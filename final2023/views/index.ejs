@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Slideshow</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/index.js" defer></script> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Collaborative Slideshow</h1>
+            <p>Your pictures shared across all devices.</p>
+        </header>
+
+        <div class="picture-count">
+            <p>We have <span id="picture-count"><%= pictureCount %></span> picture(s) stored.</p>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/upload">Upload New Picture</a></li>
+                <li><a href="/pictures">View All Pictures</a></li>
+                <li><a href="/slideshow">Start Slideshow</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Collaborative Slideshow Project</p>
+    </footer>
+</body>
+</html>
